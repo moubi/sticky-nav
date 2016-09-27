@@ -23,7 +23,7 @@ gulp.task("compile-scss", (cb) => {
 /**
  * Watching for changes in scss files
  */
-gulp.task("watch-scss", (cb) => {
+gulp.task("watch-scss", ['compile-scss'], (cb) => {
   gulp.watch("assets/scss/**/*.scss", ["compile-scss"]);
   cb();
 });
