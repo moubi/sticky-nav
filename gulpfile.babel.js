@@ -11,12 +11,13 @@ const SOURCE_DIRECTORY = './src';
 /**
  * Compile scss files into css
  */
-gulp.task("compile-scss", () => {
-  return gulp.src("assets/scss/**/*.scss")
+gulp.task("compile-scss", (cb) => {
+  gulp.src("assets/scss/**/*.scss")
     .pipe(sass({ outputStyle: 'compressed' })
     .on("error", sass.logError))
     .pipe(concat("style.css"))
     .pipe(gulp.dest("dist/css/"));
+    cb();
 });
 
 /**
