@@ -1,10 +1,13 @@
+// Pen: http://codepen.io/moubi/pen/ALpmwy
+import StickyNav from './sticky-nav';
+
 class App {
   constructor() {
     this.init();
   }
 
   init() {
-    window.document.body.innerHTML = 'Hello Earth!';
+    new StickyNav();
     return this;
   }
 }

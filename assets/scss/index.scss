@@ -1,1 +1,50 @@
+.container {
+  height: 2000px;
 
+  header h2 {
+    font-size: 30px;
+    line-height: 3.5;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  nav.scroll {
+    position: fixed;
+    top: 30px;
+  }
+
+  .column-left {
+    padding-top: 30px;
+
+    ul li {
+      padding: 0 15px;
+      font-size: 14px;
+      line-height: 2.5;
+      border-radius: 5px;
+      color: #3e4357;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.5;
+        background-color: #e6eaf2;
+      }
+    }
+  }
+
+  .column-right {
+    padding-top: 30px;
+
+    p {
+      padding-bottom: 15px;
+      font-size: 14px;
+      line-height: 1.5;
+      text-align: justify;
+    }
+  }
+
+  .nav-anchor {
+    display: block;
+    width: 1px;
+    height: 0;
+  }
+}
