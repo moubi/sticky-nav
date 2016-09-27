@@ -27,14 +27,6 @@ gulp.task("watch-scss", () => {
 });
 
 /**
- * JS linting
- */
-// gulp.task("lint", () => {
-//   gulp.src(SOURCE_DIRECTORY)
-//   .pipe(shell([`eslint ${SOURCE_DIRECTORY}`]).on("error", function() {}));
-// });
-
-/**
  * Bundle the new code
  */
 gulp.task("deploy", ["clean-dist"], () => {
