@@ -22,15 +22,17 @@ gulp.task("compile-scss", () => {
 /**
  * Watching for changes in scss files
  */
-gulp.task("watch-scss", () => {
+gulp.task("watch-scss", (cb) => {
   gulp.watch("assets/scss/**/*.scss", ["compile-scss"]);
+  cb();
 });
 
 /**
  * Bundle the new code
  */
-gulp.task("deploy", ["clean-dist"], () => {
+gulp.task("deploy", ["clean-dist"], (cb) => {
   gulp.src("./").pipe(shell(["webpack"]));
+  cb();
 });
 
 /**
@@ -44,6 +46,7 @@ gulp.task("clean-dist", (cb) => {
 /**
  * Watching for index.html changes
  */
-gulp.task("watch-deploy", ['deploy'], () => {
+gulp.task("watch-deploy", ['deploy'], (cb) => {
   gulp.watch("index.html", ["deploy"]);
+  cb();
 });
