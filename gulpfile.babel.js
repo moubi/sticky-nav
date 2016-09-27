@@ -40,3 +40,10 @@ gulp.task("clean-dist", (cb) => {
   del(["dist/*.js", "dist/*.html"]);
   cb();
 });
+
+/**
+ * Watching for index.html changes
+ */
+gulp.task("watch-deploy", ['deploy'], () => {
+  gulp.watch("index.html", ["deploy"]);
+});
