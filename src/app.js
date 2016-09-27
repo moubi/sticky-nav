@@ -1,3 +1,4 @@
+// Pen: http://codepen.io/moubi/pen/ALpmwy
 import StickyNav from './sticky-nav';
 
 class App {
