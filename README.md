@@ -10,6 +10,7 @@
 
 ## Usage
 Run `npm install` to install packages
+
 Run `npm start` to compile the files in `dist/` folder and start the webpack server
 
 ## Resources
