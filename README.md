@@ -11,7 +11,7 @@
 ## Usage
 Run `npm install` to install packages
 
-Run `npm start` to compile the files in `dist/` folder and start the webpack server
+Run `npm start` to compile the files in `dist/` folder and start webpack server
 
 ## Resources
-A pen is available here: http://codepen.io/moubi/pen/ALpmwy
+Codepen: http://codepen.io/moubi/pen/ALpmwy
