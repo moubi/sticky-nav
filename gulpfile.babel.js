@@ -12,12 +12,11 @@ const SOURCE_DIRECTORY = './src';
  * Compile scss files into css
  */
 gulp.task("compile-scss", (cb) => {
-  gulp.src("assets/scss/**/*.scss")
+  return gulp.src("assets/scss/**/*.scss")
     .pipe(sass({ outputStyle: 'compressed' })
     .on("error", sass.logError))
     .pipe(concat("style.css"))
-    .pipe(gulp.dest("dist/css/"));
-    cb();
+    .pipe(gulp.dest("dist/css"));
 });
 
 /**
@@ -25,29 +24,25 @@ gulp.task("compile-scss", (cb) => {
  */
 gulp.task("watch-scss", ['compile-scss'], (cb) => {
   gulp.watch("assets/scss/**/*.scss", ["compile-scss"]);
-  cb();
 });
 
 /**
  * Bundle the new code
  */
 gulp.task("deploy", ["clean-dist"], (cb) => {
-  gulp.src("./").pipe(shell(["webpack"]));
-  cb();
+  return gulp.src("./").pipe(shell(["webpack"]));
 });
 
 /**
  * Clean old html and js from dist
  */
 gulp.task("clean-dist", (cb) => {
-  del(["dist/*.js", "dist/*.html"]);
-  cb();
+  return del(["dist/*.js", "dist/*.html"]);
 });
 
 /**
  * Watching for index.html changes
  */
 gulp.task("watch-deploy", ['deploy'], (cb) => {
-  gulp.watch("index.html", ["deploy"]);
-  cb();
+  return gulp.watch("index.html", ["deploy"]);
 });
