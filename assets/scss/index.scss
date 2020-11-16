@@ -10,6 +10,9 @@
 
   nav.scroll {
     position: fixed;
+    position: -moz-sticky;
+    position: -webkit-sticky;
+    position: sticky;
     top: 30px;
   }
 
